@@ -27,6 +27,9 @@ Spider 继承 BaseParser, Scheduler
 #### 组件介绍
 
 ##### Scheduler
+**调度器**
+> 决定爬虫的执行顺序,以及批次爬虫的调度逻辑
+
 
 ###### init
 - self._request_buffer 根据redis_key初始化的request_buffer
@@ -34,7 +37,7 @@ Spider 继承 BaseParser, Scheduler
 - self._collector 根据redis_key初始化的collector
 - self._parsers 数组,用于存放Spider对象本身
 - self._parser_controls 数组
-- self._parser_control_obj  PaserControl组件
+- self._parser_control_obj  PaserControl组件 (从collector中获取任务 处理request)
 
 
 
